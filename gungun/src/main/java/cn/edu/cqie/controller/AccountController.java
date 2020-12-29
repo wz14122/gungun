@@ -46,12 +46,4 @@ public class AccountController {
 		return ResultBean.success(result);
 	}
 
-	/**
-	 * @param dto 加载方法，参数校验
-	 */
-	private void loadVerify(AccountRequestDto dto) {
-		// TODO Auto-generated method stub
-
-	}
-
 }
