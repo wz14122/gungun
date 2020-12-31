@@ -31,6 +31,7 @@ public class AccountController {
 	public ResultBean load(AccountRequestDto dto) {
 		Map<String, Object> result = new HashMap<String, Object>();
 
+		
 		// 1登录校验，后期可以放到切面中实现
 		LoginVerify.checkLogin(dto.getToken());
 
