@@ -31,23 +31,18 @@ public class AccountController {
 	public ResultBean load(AccountRequestDto dto) {
 		Map<String, Object> result = new HashMap<String, Object>();
 
-		
 		// 1登录校验，后期可以放到切面中实现
 		LoginVerify.checkLogin(dto.getToken());
 
-		
 		// 2封装业务逻辑对象bo
 		AccountBo bo = new AccountBo();
 		BeanUtils.copyProperties(dto, bo);
 
-		
 		// 3业务逻辑处理
 		accountService.load(bo);
 
-		
 		result.put("省市区Json", bo.getClass());
 
-		
 		return ResultBean.success(result);
 	}
 
